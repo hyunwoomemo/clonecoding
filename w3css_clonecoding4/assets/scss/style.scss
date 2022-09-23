@@ -1,0 +1,308 @@
+ul, li, div, img,body, html, h1, h2, h3 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/wedding_couple.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: grayscale(0.4);
+  color: white;
+  text-align: center;
+
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 4px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 12px 0;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+
+  h3 {
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 1000;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  ul {
+    display: flex;
+    padding: 5px 10px;
+
+    li {
+      flex: 1 1 auto;
+      text-align: center;
+      padding: 5px 10px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+.main-wrapper {
+  width: 100%;
+  background-color: #f3e2e2;
+  padding-top: 20px;
+
+  > div {
+    max-width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+
+    h1 {
+      font-size: 22px;
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      filter: grayscale(0.6);
+      padding: 15px 0;
+    }
+
+    p {
+      font-size: 10px;
+      line-height: 20px;
+      font-style: italic;
+      font-weight: lighter;
+    }
+
+    button {
+      border: none;
+      background-color: #000;
+      color: #fff;
+      padding: 10px 12px;
+      margin: 30px 0;
+      align-self: center;
+      border-radius: 2px;
+    }
+  }
+}
+
+.invited-wrapper {
+  background: url(https://www.w3schools.com/w3images/flowers.jpg) no-repeat center / cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 40px;
+      font-weight: normal;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.info-wrapper {
+  font-family: sans-serif;
+  width: 100%;
+  text-align: center;
+  background-color: #f3e2e2;
+  padding: 40px 0;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin: 0 auto;
+    gap: 60px;
+
+    > h1 {
+      color: gray;
+    }
+
+    img {
+      filter: grayscale(0.6);
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-around;
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.form-wrapper {
+  background-color: #ffdddd;
+  padding: 50px 0;
+  text-align: center;
+  letter-spacing: 2px;
+
+  h1 {
+    font-weight: lighter;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  button {
+    padding: 10px 40px;
+    border: none;
+    background-color: #f88078;
+    border-radius: 2px;
+    color: white;
+    font-size: 18px;
+
+    &:hover {
+      background-color: gray;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+.input-box {
+  position: fixed;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px 50px;
+  text-align: center;
+  z-index: 999;
+  opacity: 1;
+  pointer-events: all;
+  transition: all .3s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  > p {
+    font-size: 12px;
+
+    &:last-of-type {
+      font-style: italic;
+    }
+  }
+  input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+  }
+
+  > div {
+    display: flex;
+
+    button {
+      width: 50%;
+      border: none;
+      padding: 10px 0;
+      color: #fff;
+
+      &:first-child {
+        background-color: #4caf50;
+      }
+
+      &:last-child {
+        background-color: #f44336;
+      }
+    }
+  }
+}
+
+.remove-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 998;
+  transition: all .3s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 50px;
+  color: white;
+
+  a {
+    color: white;
+    text-decoration-line: underline;
+  }
+}
